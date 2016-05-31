@@ -5,10 +5,10 @@
 
 ##Build Docs##
 
-> bee run -gendoc=true -downdoc=true
+> bee run -gendoc=true -downdoc=true    
 > http://localhost:8080/swagger/
 
 ##Usage##
 
-> bee run watchall true
+> bee run watchall true    
 > http://localhost:8080/docs
