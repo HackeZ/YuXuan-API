@@ -90,4 +90,11 @@ func init() {
 			[]string{"get"},
 			nil})
 
+	beego.GlobalControllerRouter["YuXuanAPI/controllers:YxAdminController"] = append(beego.GlobalControllerRouter["YuXuanAPI/controllers:YxAdminController"],
+		beego.ControllerComments{
+			"POST",
+			`/`,
+			[]string{"post"},
+			nil})
+
 }
