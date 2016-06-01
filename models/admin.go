@@ -8,6 +8,8 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/orm"
+
+	"YuXuanAPI/utils"
 )
 
 // YxAdmin is Admin of YuXuan-Shop
@@ -34,6 +36,8 @@ func init() {
 // last inserted Id on success.
 func AddYxAdmin(m *YxAdmin) (id int64, err error) {
 	o := orm.NewOrm()
+	m.Salt = utils.GetSalt()
+	m.Password = utils.MD5(m.Password + m.Salt)
 	id, err = o.Insert(m)
 	return
 }
